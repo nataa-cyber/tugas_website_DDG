@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="font-Inter">
+    <div class="w-screen h-screen flex">
+        <div class="w-[48vw] h-screen">
+            <img class="object-contain md:object-cover h-screen" src="../assets/background_images/work.png" alt="Wok" />
+        </div>
+        <div class="w-[52vw] h-screen bg-white flex flex-col items-center">
+            <div class="flex w-full justify-between items-center">
+                <i class="w-8 h-8 ml-4" data-feather="chevron-left" onclick="history.back()"></i>
+                <img class="h-10 ml-auto mt-5 mr-5" src="../assets/icons/JobLinkIcon.png" alt="JobLink+">
+            </div>
+            <div>
+                <h1 class="text-center text-3xl font-bold">Verify OTP</h1>
+                <p class="text-center text-gray-400 mt-2 mb-3">Enter the 4 digit code sent to cipelipampam@gmail.com</p>
+                <div class="mb-auto flex w-full justify-evenly gap-2" id="otp-inputs">
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                    <!-- <input type="text" maxlength="1" inputmode="numeric"
+                    class="w-12 h-16 text-center text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" />
+                    <input type="text" maxlength="1" inputmode="numeric"
+                    class="w-12 h-16 text-center text-2xl font-bold border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all" /> -->
+                </div>
+                <p class="text-center text-gray-400 mt-2 mb-3">Didn't receive code? <span
+                        class="text-[#2C72E9] underline">Resend Code</span></p>
+                <button class="w-full h-9 font-bold text-white text-center bg-[#2C72E9] rounded-md shadow-md">Verify
+                    Code</button>
+            </div>
+
+            <footer class="w-fit font-semibold text-xs mt-auto mb-2 opacity-40">© 2026 JobLink+. All Rights Reserved |
+                Powered by
+                JobLink+</footer>
+        </div>
+    </div>
+
+
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        const container = document.getElementById('otp-inputs');
+        const inputs = container.querySelectorAll('input');
+
+        inputs.forEach((input, index) => {
+            // Pindah otomatis ke kanan saat mengetik
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length === 1 && index < inputs.length - 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            // Pindah otomatis ke kiri ketika menekan Backspace
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+
+            // Paste Auto FIll Input
+            input.addEventListener('paste', (e) => {
+                e.preventDefault();
+                const data = e.clipboardData.getData('text').slice(0, inputs.length);
+                const digits = data.split('');
+
+                digits.forEach((digit, i) => {
+                    if (inputs[i]) {
+                        inputs[i].value = digit;
+                    }
+                });
+
+                inputs[Math.min(digits.length, inputs.length - 1)].focus();
+            });
+        });
+    </script>
+</body>
+
+</html>

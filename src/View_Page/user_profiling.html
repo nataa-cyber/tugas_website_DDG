@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profiling</title>
+    <link rel="stylesheet" href="../output.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="overflow-hidden font-Inter">
+    <img src="../assets/icons/JobLinkIcon.png" alt="JobLinkIcon" class="h-10 w-fit ml-5 mt-5 fixed">
+    <main class="flex flex-col items-center overflow-hidden justify-between">
+        <form class="ml-auto w-[35vw] h-screen mr-auto flex flex-col justify-center" id="form">
+            <h1 class="font-bold text-2xl">What Type of Jobs Are You Looking For?</h1>
+            <br>
+            <div class="flex relative rounded-md p-2 ring-2 ring-gray-400 shadow-md transition-all" id="search_bar">
+                <input id="search" class="w-full focus:outline-none" type="search" placeholder="Search a Job">
+                <i id="search_icon" class="w-6 h-6 text-gray-400" data-feather="search"></i>
+            </div>
+            <br>
+            <ul class="flex max-h-[70vh] h-50 flex-col border rounded-md p-2 overflow-y-scroll resize-y">
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="Game Developer"> Game Developer
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="Web Developer"> Web Developer
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="Data Scientist"> Data Scientist
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="UI/UX Designer"> UI/UX Designer
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="DevOps Engineer"> DevOps Engineer
+                </label>
+            </ul>
+            <br>
+            <button onclick="location.hash='step2'"
+                class="w-full h-9 font-bold text-white text-center bg-[#2C72E9] rounded-md shadow-md">
+                Continue
+            </button>
+        </form>
+        <form class="ml-auto w-[30vw] h-screen mr-auto flex flex-col justify-center" id="step2">
+            <h1 class="font-bold text-2xl">What kind of job preferences do you want?</h1>
+            <br>
+            <h1 class="text-gray-400">Type of Work*</h1>
+            <ul class="grid grid-cols-2 grid-rows-3 pt-2 pr-2 pb-2">
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="Game Developer"> Full-Time
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="Web Developer"> Part-Time
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="Data Scientist"> Freelance
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="UI/UX Designer"> Intern
+                </label>
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="DevOps Engineer"> Contract
+                </label>
+            </ul>
+            <br>
+            <div class="flex justify-between">
+                <a href="#form" class="flex justify-center">
+                    <i class="text-gray-600" data-feather="chevron-left"></i>
+                    <h1 class="ml-2 h-9 font-bold text-center text-gray-400 rounded-md">
+                        Back
+                    </h1>
+                </a>
+                <button onclick="location.hash='step3'"
+                    class="w-32 h-9 font-bold text-white text-center bg-[#2C72E9] rounded-md shadow-md">
+                    Continue
+                </button>
+            </div>
+        </form>
+        <form class="ml-auto w-[30vw] h-screen mr-auto flex flex-col justify-center" id="step3">
+            <h1 class="font-bold text-2xl">What kind of job preferences do you want?</h1>
+            <br>
+            <label class="text-gray-400 mb-1.5">Working city preferences*</label>
+            <div class="max-w-full">
+
+                <div class="flex relative rounded-md p-2 ring-2 ring-gray-400 shadow-md transition-all"
+                    id="search_bar_loc">
+                    <input id="locationInput" class="w-full focus:outline-none" type="search"
+                        placeholder="Search a Place" autocomplete="off">
+                    <i id="search_icon" class="w-6 h-6 text-gray-400" data-feather="search"></i>
+                </div>
+
+                <div id="dropdown"
+                    class="hidden z-10 absolute pl-2 pt-2 pb-2 flex flex-col w-[30%] mt-1 gap-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-32 overflow-auto">
+                </div>
+            </div>
+            <ul id="result" class="flex flex-wrap gap-2 w-full mt-3">
+                <!-- <p class="pt-1 pb-1 pl-2 pr-2 bg-[#F0F0F0] rounded-lg hover:cursor-pointer" onclick="alert('')"></p> -->
+            </ul>
+
+            <ul class="grid grid-cols-1 grid-rows-3 pt-3 pr-2 pb-2">
+                <label class="job-item flex items-center gap-2 p-1 cursor-pointer">
+                    <input type="checkbox" name="job" value="Game Developer"> Willing to work remotely
+            </ul>
+            <div class="flex justify-between">
+                <a href="#step2" class="flex justify-center">
+                    <i class="text-gray-600" data-feather="chevron-left"></i>
+                    <h1 class="ml-2 h-9 font-bold text-center text-gray-400 rounded-md">
+                        Back
+                    </h1>
+                </a>
+                <button class="w-32 h-9 font-bold text-white text-center bg-[#2C72E9] rounded-md shadow-md">
+                    Finish
+                </button>
+            </div>
+        </form>
+
+    </main>
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        const search_bar = document.getElementById("search_bar")
+        const out_focus = "flex relative rounded-md p-2 ring-2 ring-gray-400 shadow-md transition-all"
+        const on_focus = "flex relative rounded-md p-2 ring-3 ring-[#2C72E9] transition-all"
+        const searchInput = document.getElementById('search');
+        const search_bar_loc = document.getElementById('search_bar_loc');
+        const jobItems = document.querySelectorAll('.job-item');
+        let choosen_locations = []
+        const input = document.getElementById('locationInput');
+        const dropdown = document.getElementById('dropdown');
+        const resultDiv = document.getElementById('result');
+        const resultText = resultDiv.querySelectorAll("*").forEach(e => choosen_locations.push(e));
+        searchInput.addEventListener("focusin", () => {
+            search_bar.className = on_focus
+        })
+        searchInput.addEventListener("focusout", () => {
+            search_bar.className = out_focus
+        })
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+            });
+        });
+        // DUmmy datas
+        const locations = [
+            "Indonesia, Jawa Barat, Depok",
+            "Indonesia, Jawa Barat, Bandung",
+            "Indonesia, DKI Jakarta, Jakarta Selatan",
+            "Indonesia, Jawa Tengah, Semarang",
+            "Malaysia, Kuala Lumpur"
+        ];
+
+        input.addEventListener('focusin', (e) => {
+            search_bar_loc.className = on_focus
+            let note = document.createElement('div')
+            dropdown.classList.remove('hidden');
+            note.innerText = "Start Typing!"
+            note.className = "px-4 py-2 text-gray-700"
+            dropdown.appendChild(note)
+        })
+        
+        input.addEventListener('focusout', (e) => {
+            dropdown.innerHTML = ''
+            search_bar_loc.className = out_focus
+        })
+
+        input.addEventListener('input', (e) => {
+            const value = e.target.value.toLowerCase();
+            dropdown.innerHTML = '';
+            let note = document.createElement('div')
+
+            if (value.length > 0) {
+                const filtered = locations.filter(location => location.toLowerCase().includes(value));
+                note.remove()
+
+                if (filtered.length > 0) {
+                    dropdown.classList.remove('hidden');
+                    filtered.forEach(location => {
+                        const item = document.createElement('div');
+                        if (document.getElementById(`loc-${location}`)) {
+                            item.className = "px-4 py-2 hover:bg-blue-100 cursor-pointer text-[#2C72E9]";
+                        } else {
+                            item.className = "px-4 py-2 hover:bg-blue-100 cursor-pointer text-gray-700";
+                        }
+                        item.textContent = location;
+
+                        item.onclick = () => {
+                            input.value = location;
+                            dropdown.classList.add('hidden');
+                            showResult(location);
+                            e.target.value = "";
+                        };
+                        dropdown.appendChild(item);
+                    });
+                } else {
+                    dropdown.classList.remove('hidden');
+                    note.innerText = "Uh oh Location not found! :("
+                    note.className = "px-4 py-2 text-gray-700"
+                    dropdown.appendChild(note)
+                }
+            } else {
+                dropdown.classList.remove('hidden');
+                note.innerText = "Continue Typing!"
+                note.className = "px-4 py-2 text-gray-700"
+                dropdown.appendChild(note)
+            }
+        });
+
+        function showResult(location) {
+            if (document.getElementById(`loc-${location}`)) {
+                return
+            } else {
+                const id = "loc-" + location
+                resultDiv.classList.remove('hidden');
+                resultDiv.innerHTML += `<a id='${id}' class="pt-1 pb-1 pl-2 pr-2 bg-[#F0F0F0] hover:cursor-pointer rounded-lg" onclick='this.remove()'>${location}</a>`;
+            }
+        }
+
+        // Menutup dropdown jika klik di luar input
+        document.addEventListener('click', (e) => {
+            if (!input.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.add('hidden');
+            }
+        });
+
+        searchInput.addEventListener('input', function (e) {
+            // Ubah input menjadi huruf kecil agar pencarian tidak sensitif huruf besar/kecil
+            const searchTerm = e.target.value.toLowerCase();
+
+            jobItems.forEach(item => {
+                // Ambil teks dari dalam label, hilangkan spasi kosong di awal/akhir
+                const jobName = item.textContent.trim().toLowerCase();
+
+                // Cek apakah teks pekerjaan mengandung kata yang diketik
+                if (jobName.includes(searchTerm)) {
+                    // Jika cocok, pastikan elemen terlihat (hapus class hidden, pastikan flex aktif)
+                    item.classList.remove('hidden');
+                    item.classList.add('flex');
+                } else {
+                    // Jika tidak cocok, sembunyikan elemen dengan class hidden dari Tailwind
+                    item.classList.add('hidden');
+                    item.classList.remove('flex');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JobLink+ — Karir Impianmu</title>
+  <link rel="stylesheet" href="../output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { font-family: 'Plus Jakarta Sans', 'Segoe UI', sans-serif; }
+    .hero-bg { background: linear-gradient(140deg, #04083f 0%, #0b12a0 55%, #080d6e 100%); }
+    .stats-bg { background: linear-gradient(90deg, #080d6e 0%, #0b12a0 100%); }
+    .nav-scrolled { backdrop-filter: blur(14px); background: rgba(4,8,63,0.92) !important; }
+    .job-type-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 99px; }
+    .feature-card:hover .feature-icon { transform: scale(1.08); }
+    .feature-icon { transition: transform 0.2s ease; }
+    .social-btn { width: 34px; height: 34px; display:flex; align-items:center; justify-content:center; border-radius: 8px; transition: background 0.2s; }
+    .social-btn:hover { background: rgba(255,255,255,0.12); }
+    /* smooth scroll */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar" class="bg-[#04083f] text-white px-6 md:px-10 py-4 flex items-center justify-between fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <!-- Logo -->
+      <div class="w-12 h- ">
+       <img src="/src/assets/icons/JobLinkIcon.png" alt="Icon">
+      </div>
+    <!-- Links -->
+    <div class="hidden md:flex items-center gap-7 text-[13px] text-white/65 font-medium">
+      <a href="#fitur" class="hover:text-white transition-colors duration-200">Fitur</a>
+      <a href="#cara-kerja" class="hover:text-white transition-colors duration-200">Cara Kerja</a>
+      <a href="#testimoni" class="hover:text-white transition-colors duration-200">Testimoni</a>
+    </div>
+    <!-- CTA -->
+    <div class="flex items-center gap-3">
+      <button class="hidden sm:block text-[13px] font-medium text-white/60 hover:text-white transition-colors duration-200 px-3 py-2"><a href="./login.html">Masuk</a></button>
+      <button class="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white text-[13px] font-semibold px-5 py-2.5 rounded-xl transition-colors duration-200 shadow-lg shadow-orange-500/20"><a href="./signup.html">Daftar</a></button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero-bg text-white pt-32 pb-20 px-6 text-center">
+    <!-- label -->
+    <h1 class="text-4xl md:text-[52px] font-extrabold mb-5 leading-[1.15] tracking-tight">
+      Temukan Karir <span class="text-orange-400">Impianmu</span><br class="hidden md:block"/> Mulai Hari Ini
+    </h1>
+    <p class="text-white/55 text-base md:text-lg mb-10 max-w-md mx-auto leading-relaxed">
+      Ribuan lowongan kerja dari perusahaan terpercaya. Lamar mudah, pantau status, raih karir terbaik.
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+    </div>
+  </section>
+
+  
+  <!-- Fitur -->
+  <section id="fitur" class="bg-gray-50 py-20 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">Fitur Unggulan</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">Mengapa Pilih <span class="text-blue-700">JobLink+</span>?</h2>
+        <p class="text-gray-400 text-sm max-w-sm mx-auto">Semua yang kamu butuhkan untuk mendapatkan pekerjaan impian, dalam satu platform.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+          <div class="feature-icon w-11 h-11 bg-blue-50 border border-blue-100 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#3b82f6" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-[15px]">Smart Job Matching</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">AI kami mencocokkan profilmu dengan lowongan paling relevan secara otomatis, tanpa harus scroll manual.</p>
+        </div>
+
+        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+          <div class="feature-icon w-11 h-11 bg-orange-50 border border-orange-100 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#f97316" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-[15px]">CV Builder Pro</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Buat CV profesional ATS-friendly dalam hitungan menit dengan template yang dirancang HR expert.</p>
+        </div>
+
+        <div class="feature-card bg-white rounded-2xl p-6 border border-gray-100 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-200">
+          <div class="feature-icon w-11 h-11 bg-green-50 border border-green-100 rounded-xl flex items-center justify-center mb-4">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#22c55e" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3 class="font-bold text-gray-900 mb-2 text-[15px]">Lacak Lamaran</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Pantau semua lamaranmu dari satu dashboard — real-time, ringkas, dan mudah dipahami kapan saja.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Cara kerja -->
+  <section id="cara-kerja" class="bg-white py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">Cara Kerja</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Mulai dalam <span class="text-blue-700">3 Langkah</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div>
+          <div class="w-14 h-14 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-xl font-extrabold mx-auto mb-4 shadow-lg shadow-blue-200">1</div>
+          <h3 class="font-bold text-gray-900 mb-2">Buat Profil</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Daftar gratis dan lengkapi profilmu dalam 5 menit. Upload CV atau buat langsung di sini.</p>
+        </div>
+        <div>
+          <div class="w-14 h-14 bg-orange-500 text-white rounded-2xl flex items-center justify-center text-xl font-extrabold mx-auto mb-4 shadow-lg shadow-orange-200">2</div>
+          <h3 class="font-bold text-gray-900 mb-2">Temukan Lowongan</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Jelajahi ribuan lowongan atau biarkan AI kami merekomendasikan yang paling cocok untukmu.</p>
+        </div>
+        <div>
+          <div class="w-14 h-14 bg-green-500 text-white rounded-2xl flex items-center justify-center text-xl font-extrabold mx-auto mb-4 shadow-lg shadow-green-200">3</div>
+          <h3 class="font-bold text-gray-900 mb-2">Lamar & Pantau</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Lamar dengan 1 klik dan pantau perkembangan lamaranmu secara real-time dari dashboard.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ── -->
+  <section id="testimoni" class="bg-white py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="text-blue-600 text-xs font-bold uppercase tracking-widest mb-3">Cerita Nyata</p>
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 tracking-tight">Mereka Sudah <span class="text-blue-700">Berhasil</span></h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+
+        <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200">
+          <div class="flex gap-0.5 mb-4">
+            <span class="text-yellow-400 text-base">★★★★★</span>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">"Dalam 2 minggu langsung dapat 3 panggilan interview. Sekarang sudah kerja di perusahaan unicorn impian saya!"</p>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-9 h-9 bg-blue-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">RA</div>
+            <div>
+              <div class="text-sm font-bold text-gray-900">Rizky Aditya</div>
+              <div class="text-xs text-gray-400">Software Engineer · Tokopedia</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200">
+          <div class="flex gap-0.5 mb-4">
+            <span class="text-yellow-400 text-base">★★★★★</span>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">"CV Builder-nya sangat membantu! CV saya langsung terlihat profesional dan rekruter bilang salah satu yang terbaik."</p>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-9 h-9 bg-pink-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">SP</div>
+            <div>
+              <div class="text-sm font-bold text-gray-900">Sinta Permata</div>
+              <div class="text-xs text-gray-400">Product Designer · Gojek</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-100 rounded-2xl p-6 hover:shadow-md transition-shadow duration-200">
+          <div class="flex gap-0.5 mb-4">
+            <span class="text-yellow-400 text-base">★★★★★</span>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed mb-5">"Smart Matching-nya luar biasa. Set preferensi sekali, lowongan yang cocok langsung muncul tanpa harus scroll berjam-jam."</p>
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-9 h-9 bg-green-500 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0">BW</div>
+            <div>
+              <div class="text-sm font-bold text-gray-900">Bagas Wicaksono</div>
+              <div class="text-xs text-gray-400">Data Analyst · Shopee</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="hero-bg text-white py-16 px-6 text-center">
+    <p class="text-blue-300 text-xs font-bold uppercase tracking-widest mb-4">Mulai Sekarang — Gratis!</p>
+    <h2 class="text-2xl md:text-4xl font-extrabold mb-4 tracking-tight leading-tight">Karir Impianmu<br/>Dimulai di Sini</h2>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <button class="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-3.5 rounded-xl transition-colors duration-200 shadow-lg shadow-orange-500/30 text-sm"><a href="./signup.html">Daftar Sekarang</a></button>
+    </div>
+  </section>
+
+   <!-- ── FOOTER ── -->
+  <footer style="background: linear-gradient(135deg, #04083f 0%, #0b12a0 45%, #080d6e 100%);" class="text-white px-8 py-10">
+    <div class="max-w-5xl mx-auto">
+      <!-- top row -->
+      <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-8">
+
+        <!-- Brand + desc -->
+        <div class="max-w-xs">
+          <div class="flex items-center gap-2.5 mb-3">
+                <img src="/src/assets/icons/JobLinkIcon.png" class="w-32 h-12" alt="JobLink">             
+              </div>
+              <p class="text-xs text-white/40 mt-2 ">Platform karir terpercaya untuk profesional Indonesia.<br> Temukan lowongan impian dengan mudah.</p>
+          </div>
+          <!-- registry badges -->
+          <div class="flex-col items-center gap-3" >
+            <p class="text-[10px] text-white/35 font-semibold uppercase tracking-widest mt-2 ">Terdaftar & diawasi oleh</p>   
+            <div class="w-px h-7 bg-white/15"></div>
+            <div class="flex items-center gap-1.5 w-8 h-8">
+              <p class="text-[8px] text-white/50 font-bold tracking-widest">KOMDIGI</p>
+              <img src="/src/assets/icons/kementerian-ketenagakerjaan-_-kemnaker-logo.png" alt="">
+              <div class="text-[8px] text-white/40 leading-snug">KEMENTERIAN<br/>KETENAGAKERJAAN<br/>REPUBLIK INDONESIA</div>
+            </div>
+          </div>
+        </div>
+<!-- bottom bar -->
+      <div class="border-t border-white/10 pt-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <div class="flex gap-1">
+          <a href="https://www.instagram.com/" class="social-btn"><svg width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="white" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg></a>
+          <a href="https://www.tiktok.com/id-ID/" class="social-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.77.5 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.34 6.34 0 0 0-6.13 8.38 6.34 6.34 0 0 0 11.78-3.09V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.02-.06z"/></svg></a>
+          <a href="#" class="social-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.facebook.com/" class="social-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+        <p class="text-[11px] text-white/30">© 2026 JobLink+. All Rights Reserved | Powered by JobLink+</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
